@@ -1,4 +1,4 @@
-# **AzureStorageSwift** 🚀  
+# **AzureStorageSwift**
 A Swift Package for Azure Storage access on macOS & iOS  
 
 **Forked from the original deprecated [Azure Storage iOS SDK](https://github.com/Azure/azure-storage-ios), now with Swift Package Manager (SPM) support.**  
