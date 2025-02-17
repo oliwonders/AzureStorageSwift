@@ -1,6 +1,12 @@
 import Testing
-@testable import AzureStorageSwift
+import Foundation
+
+//@testable import AzureStorageSwift
 
 @Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    
+//    var container: AZSCloudBlobContainer
+//    container = try AZSCloudBlobContainer(url: NSURL(string: "azureSasConnectionString")! as URL)
+//    
+//    #expect(container != nil)
 }

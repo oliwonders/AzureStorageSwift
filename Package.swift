@@ -22,12 +22,13 @@ let package = Package(
             exclude: ["include"], // Prevents double imports
             publicHeadersPath: "include",
             cSettings: [
-                .headerSearchPath("Sources/AzureStorageSwift/include")
+                .headerSearchPath("Sources/AzureStorageSwift/include"),
             ]
         ),
         .testTarget(
             name: "AzureStorageSwiftTests",
-            dependencies: ["AzureStorageSwift"]
+            dependencies: ["AzureStorageSwift"],
+            path: "Tests/AzureStorageSwiftTests"
         ),
     ]
 )
