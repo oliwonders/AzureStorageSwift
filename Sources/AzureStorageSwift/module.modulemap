@@ -1,9 +1,11 @@
 
 module AzureStorageSwift {
-    umbrella header "include/AzureStorageSwift.h"
+//    umbrella header "AzureStorageSwift.h"
     header "AZSClient.h"
     header "AZSCloudBlobClient.h"
     header "AZSCloudBlobContainer.h"
-    link "c++"
     export *
+//    module * { export * }
+    link "c++"
+    
 }

@@ -1,6 +1,4 @@
 // swift-tools-version: 6.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
@@ -9,7 +7,6 @@ let package = Package(
         .macOS(.v11), .iOS(.v14)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "AzureStorageSwift",
             targets: ["AzureStorageSwift"]),
@@ -19,10 +16,12 @@ let package = Package(
             name: "AzureStorageSwift",
             dependencies: [],
             path: "Sources/AzureStorageSwift",
-            exclude: ["include"], // Prevents double imports
+            exclude: [],
             publicHeadersPath: "include",
             cSettings: [
-                .headerSearchPath("Sources/AzureStorageSwift/include"),
+                .headerSearchPath("."),
+                .headerSearchPath("include")
+                
             ]
         ),
         .testTarget(
