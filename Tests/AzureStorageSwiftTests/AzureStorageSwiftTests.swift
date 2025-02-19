@@ -1,6 +1,5 @@
 import Testing
 import Foundation
-import XCTest
 
 @testable import AzureStorageSwift
 
@@ -24,7 +23,6 @@ func testBlockBlobReference() async throws {
     
     #expect(blockBlob != nil)
     #expect(blockBlob?.blobName == blobName)
-  //  #expect(blockBlob.container.name == container.name)
 }
 
 @Test
@@ -37,7 +35,6 @@ func testPageBlobReference() async throws {
     
     #expect(pageBlob != nil)
     #expect(pageBlob?.blobName == blobName)
-    //#expect(pageBlob.container.name == container.name)
 }
 
 

@@ -1,30 +1,21 @@
-# AzureStorageSwift 
+# AzureStorageSwift
 
-A Swift Package for Azure Storage access on macOS & iOS  
+A Swift Package for Azure Storage access on macOS & iOS
 
-**Forked from the deprecated [Azure Storage iOS SDK](https://github.com/Azure/azure-storage-ios), now with Swift Package Manager (SPM) support.**  
+> Note: Forked from the deprecated and unmaintained [Azure Storage iOS SDK](https://github.com/Azure/azure-storage-ios)
 
-> ⚠️ *This repository is a fork of the original Azure Storage SDK for iOS, which was no longer maintained and did not support macOS. To use it in a macOS application, I initially had to copy the source code locally. This fork now includes full Swift Package Manager (SPM) support, making it easier to integrate into projects. While the codebase is older and newer libraries exist, it remains functional for my needs. Eventually, I plan to migrate to a more modern solution, but in the meantime, hopefully you'll find this useful.*
+While the codebase is older and the maintained [Azure SDK for iOS](https://github.com/Azure/azure-sdk-for-ios) exist, it remains functional for simple Blob interaction.
 
----
+## **Getting Started**
 
-## **Features**  
-✅ **Upload and Download Blobs** (NSData, Files, or Streams)  
-✅ **Create/List/Delete Blob Containers**  
-✅ **Shared Key & SAS Authentication**  
-✅ **Retry Policies & Request Logging**  
-✅ **Supports macOS and iOS**  
+You can integrate **AzureStorageSwift** into your Swift project using Swift Package Manager (SPM):
 
----
+### **Xcode Integration**
 
-## **Installation via Swift Package Manager (SPM)**  
-You can integrate **AzureStorageSwift** into your Swift project using **Swift Package Manager (SPM):**
-
-### **Xcode Integration**  
-1. Open your Xcode project.  
-2. Go to **File → Add Packages**.  
-3. Enter the repository URL:  
+1. Open your Xcode project.
+2. Go to **File → Add Package Dependencies**.
+3. Enter the repository URL:
    ```plaintext
    https://github.com/oliwonders/AzureStorageSwift.git
    ```
-Contributions are welcome. Fork the repo, make changes, and submit a PR.
+   Contributions are welcome. Fork the repo, make changes, and submit a PR.
