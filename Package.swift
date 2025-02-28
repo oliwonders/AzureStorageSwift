@@ -1,10 +1,10 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
     name: "AzureStorageSwift",
     platforms: [
-        .macOS(.v11), .iOS(.v14)
+        .macOS(.v10_14), .iOS(.v14)
     ],
     products: [
         .library(
