@@ -63,6 +63,9 @@ A Swift Package for Azure Storage access on macOS & iOS, providing simple and ef
     }
 ```
 
+> **Note for Command-Line Applications:** Azure Storage operations are asynchronous. In command-line tools, you may need to use a DispatchGroup or RunLoop to prevent the program from exiting before operations complete.
+
+
 ## Known Limitations
 
 - Limited to basic Blob storage operations
