@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "AzureStorageSwift",
     platforms: [
-        .macOS(.v10_14), .iOS(.v14)
+        .macOS(.v11), .iOS(.v14)
     ],
     products: [
         .library(
