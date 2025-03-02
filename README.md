@@ -34,33 +34,33 @@ A Swift Package for Azure Storage access on macOS & iOS, providing simple and ef
 ## Basic Usage
 
 ```swift
-        let sasUrl = "https://yourstorageaccount.blob.core.windows.net/containername?sv=2020-08-04&ss=b&srt=co&sp=rwdlacitfx&se=2023-04-30T17:31:42Z&st=2023-04-30T09:31:42Z&spr=https&sig=XXXXX"
+    let sasUrl = "https://yourstorageaccount.blob.core.windows.net/containername?sv=2020-08-04&ss=b&srt=co&sp=rwdlacitfx&se=2023-04-30T17:31:42Z&st=2023-04-30T09:31:42Z&spr=https&sig=XXXXX"
 
-        let container = try AZSCloudBlobContainer(url: URL(string: sasUrl))
+    let container = try AZSCloudBlobContainer(url: URL(string: sasUrl))
 
-        // List blobs in the container
-        container.listBlobsSegmented(
-            with: nil,
-            prefix: nil,
-            useFlatBlobListing: true,
-            blobListingDetails: AZSBlobListingDetails(),
-            maxResults: 50
-        ) { (error, results) in
-            if let error = error {
-                print("Error listing blobs: \(error.localizedDescription)")
-                return
-            }
-
-            guard let blobs = results?.blobs as? [AZSCloudBlob] else {
-                print("No blobs found or unable to cast results")
-                return
-            }
-
-            print("Found \(blobs.count) blobs:")
-            for blob in blobs {
-                print("- \(blob.blobName ?? "Unknown")")
-            }
+    // List blobs in the container
+    container.listBlobsSegmented(
+        with: nil,
+        prefix: nil,
+        useFlatBlobListing: true,
+        blobListingDetails: AZSBlobListingDetails(),
+        maxResults: 50
+    ) { (error, results) in
+        if let error = error {
+            print("Error listing blobs: \(error.localizedDescription)")
+            return
         }
+
+        guard let blobs = results?.blobs as? [AZSCloudBlob] else {
+            print("No blobs found or unable to cast results")
+            return
+        }
+
+        print("Found \(blobs.count) blobs:")
+        for blob in blobs {
+            print("- \(blob.blobName ?? "Unknown")")
+        }
+    }
 ```
 
 ## Known Limitations
