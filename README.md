@@ -1,15 +1,23 @@
 # AzureStorageSwift
 
-A Swift Package for Azure Storage access on macOS & iOS, providing simple and efficient Blob container interactions.
+A Swift Package for Azure Storage access on macOS & iOS, providing simple and efficient Blob container interactions. 
+
+See [AzureBlobCLI](https://github.com/oliwonders/AzureBlobCLI) for an example usage.
 
 > **Note**: This package is forked from the deprecated [Azure Storage iOS SDK](https://github.com/Azure/azure-storage-ios). While functional for basic operations, consider using the officially maintained [Azure SDK for iOS](https://github.com/Azure/azure-sdk-for-ios) for production applications.
+
+## Motivation
+
+Microsoft’s iOS SDK doesn’t yet ship a standalone blob client via SPM. This just makes it simplier to integrate. 
+This library is a stop‑gap until the official `AzureStorageBlob` package lands [Here](https://github.com/Azure/azure-sdk-for-ios) 
+
+---
 
 ## Features
 
 - Basic Blob container operations (upload, download, delete)
 - Support for both macOS and iOS platforms
 - Simple integration via Swift Package Manager
-- Lightweight alternative to the full Azure SDK
 
 ## Prerequisites
 
