@@ -54,7 +54,7 @@ public extension AZSCloudBlobContainer {
     }
 
     /// Lists blobs (flat) and returns the first segment.
-    func listBlobs(
+    func listBlobsSegmented(
         prefix: String? = nil,
         maxResults: Int32 = 500
     ) async throws -> AZSBlobResultSegment {
@@ -78,14 +78,4 @@ public extension AZSCloudBlobContainer {
         }
     }
 
-    /// Convenience: returns a *new* block-blob reference wrapped in async helpers.
-    func blockBlobReference(named name: String) throws -> AZSCloudBlockBlob {
-        guard let blob = self.blockBlobReference(fromName: name) else {
-            throw NSError(domain: "AZSClient",
-                          code: -1,
-                          userInfo: [NSLocalizedDescriptionKey:
-                                     "Could not create blob reference"])
-        }
-        return blob
-    }
 }
